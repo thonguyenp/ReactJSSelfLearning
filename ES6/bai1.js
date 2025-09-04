@@ -8,10 +8,17 @@ console.log("Check info: ", name, age);
 
 function test ()
 {
-    var x = 10;
+    var x = 10; //khong nen dung var
+    if (x === 10)
+    {
+        let y = 5;  //gia tri bien y chi dung trong x
+    }
     console.log("Check info: ", name, age); 
 }
 
-console.log("Check info: ", x); 
 
 // test();
+
+const z  = 15;  
+const test = 20; //khong duoc gan lai hang so
+console.log("Check info: ", z); 
