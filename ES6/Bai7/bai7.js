@@ -1,39 +1,61 @@
-// Bên trong map() và filter () đều là 1 func 
+//Toán tử ... => dùng để copy các object
 
-const myArr = [1,2,3,4];
+const firstArr = [1, 2, 3];
+const secondArr = [4, 5, 6];
 
-// const myList = myArr.map((item) => item * 2);  //jsx 
-//map () tao 1 arr mới từ arr ban đầu
+const thirdArr = [...firstArr, ...secondArr];
+//Với toán tử ... thì thứ tự trước sau quan trọng
+const fourthArr = [...secondArr, ...firstArr];
+// console.log(thirdArr, fourthArr);
 
-//Bên trong hàm map() là 1 func
-//const  a = () => {};
-const myList = myArr.map((item, index) => 
+let myArr = ["Tho", "hehe", "React"];
+// myArr.push("new Item"); //đưa vào cuối mảng
+// myArr = [...myArr, "new Item"]; //tác dụng hệt như trên
+
+// myArr.unshift('New item');
+myArr = ["New item", ...myArr];
+
+
+// console.log(myArr);
+
+const test = {name: "tho", address: "984 duong 23/10"};
+console.log({...test});
+
+const myVehicle = {
+  brand: 'Ford',
+  model: 'Mustang',
+  color: 'red'
+};
+
+const updateMyVehicle = {
+  type: 'car',
+  year: 2021,
+  color: 'yellow'
+};
+//ghi đè nội dung của updateMyVehicle lên myVehicle
+const update = {...myVehicle, ...updateMyVehicle};
+
+// console.log(update);
+
+// const state = {
+//     name: "tho",
+//     age: 21,
+//     address: "Nha Trang"
+// };
+
+// const update2 = {
+//     ...state,
+//     age: 25
+// };
+
+// console.log(update2);
+
+//exercise
+function sum (a, b, c)
 {
-    // console.log(item, index);
-    return item * 2;
-});
-
-//Viết theo kiểu tạo thêm 1 arr mới
-const newArr = []
-for (let i = 0; i < myArr.length; i++)
-{
-    let item = myArr[i] * 2;
-    newArr.push(item);
+    return a + b + c;
 }
 
-// console.log(myList,newArr);
+const numbers = [1, 11, 2, 3];
 
-//Filter làm giảm số lượng phần tử ban đầu theo 1 tiêu chí
-const ages = [32, 33, 16, 40];
-
-// const result = ages.filter(chkAdult);
-// function chkAdult (age)
-// {
-//     return age >= 18;
-// }
-
-const result = ages.filter((age) => {
-    return age >= 18;
-});
-
-console.log(result);
+console.log(sum(...numbers));   //chỉ tính tổng 3 số đầu trongmảng
