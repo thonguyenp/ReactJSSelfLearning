@@ -5,8 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<script src="/Bai6/bai6.js"></script>
+<style>
+    #tableTest {
+    border-collapse: collapse;
+    width: 100%;
+    }
+
+    #tableTest td,
+    #tableTest th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    #tableTest tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    #tableTest tr:hover {
+        background-color: #ddd;
+    }
+    #tableTest th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #04aa6d;
+        color: white;
+    }
+
+</style>
 <body>
     Hello
+    <div id="tableTest">
+
+    </div>
+    <script src="/Bai6/bai6.js"></script>
 </body>
 </html>
